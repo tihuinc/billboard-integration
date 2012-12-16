@@ -37,7 +37,7 @@ class SightingsController < ApplicationController
     @sighting = Sighting.find(params[:id])
   end
 
-  # POST /sightings
+  # POST /sightings 
   # POST /sightings.json
   
   def create
