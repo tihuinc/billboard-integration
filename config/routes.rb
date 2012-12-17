@@ -1,7 +1,13 @@
 BillboardIntegration::Application.routes.draw do
+  resources :transmitters
+
+  resources :receivers
+
   resources :sightings
 
   root :to => 'sightings#index'
+  match 'billboard_1/status' => 'status#billboard_1'
+  match 'billboard_2/status' => 'status#billboard_2'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @transmitter.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @transmitter.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_transmitter_path(@transmitter) %> |
+<%= link_to 'Back', transmitters_path %>
