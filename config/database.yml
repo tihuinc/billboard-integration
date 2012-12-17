@@ -10,7 +10,7 @@ development:
   database: billboard_integration
   pool: 5
   username: root
-  password: 
+  password: root
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +23,7 @@ test:
   database: billboard_integration
   pool: 5
   username: root
-  password: 
+  password: root
   socket: /tmp/mysql.sock
 
 production:
@@ -33,5 +33,5 @@ production:
   database: billboard_integration
   pool: 5
   username: root
-  password: 
+  password: root
   socket: /tmp/mysql.sock
