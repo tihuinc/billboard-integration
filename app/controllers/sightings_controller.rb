@@ -39,16 +39,6 @@ class SightingsController < ApplicationController
 
   # POST /sightings 
   # POST /sightings.json
-  
-  def create
-    @sighting_event = SightingEvent.new(params[:sighting_event])
-
-    if @sighting_event.save
-      redirect_to @sighting_event, notice: 'Sighting event was successfully created.'
-    else
-      render action: "new"
-    end
-  end
 
   def create
     @sighting = Sighting.new(params[:sighting])
