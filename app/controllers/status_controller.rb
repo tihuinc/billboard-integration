@@ -27,7 +27,6 @@ class StatusController < ApplicationController
     end
 
     return render json: payload.to_json, status: :ok
-    
   end
 
 end
