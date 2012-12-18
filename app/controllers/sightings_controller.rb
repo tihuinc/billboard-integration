@@ -41,9 +41,11 @@ class SightingsController < ApplicationController
   # POST /sightings.json
 
   def create
-    @sighting = Sighting.new(params[:sighting])
+    if params[:transmitter_name] && params[:receiver_name]
+      @sighting = Sighting.new(:transmitter_name => params[:transmitter_name], :receiver_name => params[:receiver_name])
+    end
 
-    if @sighting.save
+    if @sighting && @sighting.save
       redirect_to @sighting, notice: 'Sighting event was successfully created.'
     else
       render action: "new"
