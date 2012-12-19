@@ -3,9 +3,9 @@ class StatusController < ApplicationController
     sighting = Sighting.where(:transmitter_name => 'transmitter_1').order("created_at DESC").first
     if sighting && (Time.now - sighting.created_at < 10)
       if sighting.receiver_name == 'receiver_1'
-        payload = {:image => "rx_1_tx_1_ipad.png"}
+        payload = {:image => "rx1_tx1_A_1920x1080.png"}
       elsif sighting.receiver_name == 'receiver_2'
-        payload = {:image => "rx_2_tx_1_ipad.png"}
+        payload = {:image => "rx2_tx1_A_1920x1080.png"}
       end
     else
       payload = {}
@@ -18,9 +18,9 @@ class StatusController < ApplicationController
     sighting = Sighting.where(:transmitter_name => 'transmitter_2').order("created_at DESC").first
     if sighting && (Time.now - sighting.created_at < 10)
       if sighting.receiver_name == 'receiver_1'
-        payload = {:image => "rx_1_tx_2_ipad.png"}
+        payload = {:image => "rx1_tx2_A_1920x1080.png"}
       elsif sighting.receiver_name == 'receiver_2'
-        payload = {:image => "rx_2_tx_2_ipad.png"}
+        payload = {:image => "rx2_tx2_A_1920x1080.png"}
       end
     else
       payload = {}
